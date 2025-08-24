@@ -11,6 +11,28 @@ body{
     font-family: "Poppins", sans-serif;
 }
 
+#minicircle{
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+    height: 11px;
+    width: 11px;
+    background-color: rgb(216, 197, 233) ;
+    position: absolute;
+    border-radius: 50%;
+    z-index: 9999;
+}
+
+.bounding{
+    width: fit-content;
+    overflow: hidden;
+}
+
+.bounding >div, .boundingelem{
+    transform: translateY(100%);
+    
+}
+
+
+
 main hr{
     border: 0;
     background: rgb(216, 197, 233);
@@ -33,7 +55,8 @@ nav{
     left: 0;
     width: 100%;
     height: 75px;
-    z-index: 9999;
+    z-index: 9998; 
+    /* 9998 otherwise minicircle wont be visible even if i do 9999 */
 }
 
 
@@ -147,6 +170,10 @@ nav ul li a:hover {
     font-size: 0.8rem;
     
 }
+#element{
+    color: rgb(153, 81, 220);
+    font-weight: 300;
+}
 
 
 
@@ -183,6 +210,7 @@ nav ul li a:hover {
 }
 .duration{
     /* color: rgb(153, 81, 220); */
+    
     text-shadow: 2px 1px rgb(153, 81, 220) ;
 }
 .exp img{
@@ -191,4 +219,22 @@ nav ul li a:hover {
     height: 35%;
     z-index: 999;
     position: absolute;
+}
+
+/* Initial hidden state */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(80px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out; /* longer duration */
+}
+
+/* Visible state */
+.animate-on-scroll.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* For stagger effect */
+.exp-wrapper .exp.animate-on-scroll {
+  transition-delay: var(--delay, 0s);
 }
