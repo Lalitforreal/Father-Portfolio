@@ -10,12 +10,14 @@ body{
     color: white;
     font-family: "Poppins", sans-serif;
 }
-/* main hr{
+
+main hr{
     border: 0;
     background: rgb(216, 197, 233);
-    height: 0.8px;
-    /* margin: 40px 64px;
-} */
+    height: 1px;
+    margin: 60px 64px; 
+    box-shadow: 2px 1px rgb(153, 81, 220) ;
+}
 
 
 
@@ -26,7 +28,14 @@ nav{
     align-items: center;
     height: 75px;
     background-color: rgb(18, 18, 62);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 75px;
+    z-index: 9999;
 }
+
 
 
 nav ul{
@@ -45,6 +54,7 @@ nav ul li a{
 .left{
     font-size: 2rem;
     margin-left: 10%;
+    text-shadow: 2px 1px rgb(153, 81, 220) ;
 }
 .right{
     margin-right: 6%;
@@ -75,9 +85,12 @@ nav ul li a:hover::after {
 }
 
 nav ul li a:hover {
-    color: rgb(153, 81, 220); /* optional: changes color when hovered */
+    text-shadow: 2px 1px rgb(153, 81, 220) ;; /* optional: changes color when hovered */
 }
 /* underline wala effect end */
+
+
+
 
 
 /* neeche ka mamla */
@@ -87,6 +100,7 @@ nav ul li a:hover {
     margin: 10vh 0;  /* vertical horizontal*/
     overflow-x: hidden;
     align-items: center;
+    /* margin-bottom: 70px; */
 }
 
 .firstSection > div{
@@ -134,11 +148,15 @@ nav ul li a:hover {
     
 }
 
+
+
 .secondSection .shead{
     margin-left: 10%;
     margin-top: 3rem;
 }
-
+.secondSection h2 span{
+    text-shadow: 2px 1px rgb(153, 81, 220) ;
+}
 
 
 
@@ -159,7 +177,18 @@ nav ul li a:hover {
     border-bottom: 1px solid grey;;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     font-size: 3rem;
-    color: grey;
-
+    /* color: grey; */
+}
+.duration{
+    /* color: rgb(153, 81, 220); */
+    text-shadow: 2px 1px rgb(153, 81, 220) ;
+}
+.exp img{
+    display: none;
+    /* opacity: 0; */
+    height: 35%;
+    z-index: 999;
+    position: absolute;
 }

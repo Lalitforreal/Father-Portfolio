@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>M.K Singh - Portfolio</title>
     <link rel="stylesheet" href="pp.css">
+    <link rel="stylesheet" href="locomotive.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"></head>
@@ -25,53 +26,87 @@
              </ul>
         </div>
     </nav>
+    <div class="data-scroll-container">
 
-    <main>
-        <section class="firstSection">
-            <div id="fleft">
-                <!-- <p>Hi,<br>I'm <span class="purple">Mithlesh</span> and<br> I am a <span>Sanmica Manufacturing Expert</span></p> -->
-                 Hi,
-                <div>I'm <span class="purple">Mithlesh</span> </div>
-                <div>and I'm skilled at</div>
-                  <!-- Element to contain animated typing -->
-                <span class = "purple" id="element"></span>
-                
-            </div>
-            <div id="fright">
-                <img src="finalImg (1).png">
-            </div>
-        </section>
-        <hr>
+        <main id="main">
+            <section class="firstSection">
+                <div id="fleft">
+                    <!-- <p>Hi,<br>I'm <span class="purple">Mithlesh</span> and<br> I am a <span>Sanmica Manufacturing Expert</span></p> -->
+                     Hi,
+                    <div>I'm <span class="purple">Mithlesh</span> </div>
+                    <div>and I'm skilled at</div>
+                      <!-- Element to contain animated typing -->
+                    <span class = "purple" id="element"></span>
+                    
+                </div>
+                <div id="fright">
+                    <img src="finalImg (1).png">
+                </div>
+            </section>
+            
+            <hr>
+            
+    
+            <section class="secondSection">
+                <div class="shead">
+                    <p>Where I've worked so far in my</p>
+                    <h2>Past Experiences of <span id="yearsH1">31 years</span></h2>
+                </div>
+    
+                <div class="exp-wrapper">
+    
+                        <div class="exp">
+                            <img src="1.jpg" alt="">
+                            <span style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+                                BIJAYA SHREE
+                            </span>
+                            <h4  style="font-size: small; margin-right: 5%; ">
+                                <span style="text-shadow: 2px 1px rgb(153, 81, 220)">2023 - Present</span>
+                            </h4>
+                        </div>
+    
+                        <div class="exp" >
+                            <img src="2.jpg" alt="">
+                            <span style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">SUPERTECH LAMINATES</span>
+                            <h4 class="duration" style="font-size: small; margin-right: 5%;">2003 - 2010 <br>
+                                2018 -2023
+                            </h4>
+                        </div>
+                        <div class="exp" >
+                            <img src="3.jpg" alt="">
+                            <span style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+                                JOGMA LAMINATES
+                            </span>
+                            <h4 class="duration" style="font-size: small; margin-right: 5%;">
+                                2010 - 2017
+                            </h4>
+                        </div>
+                        <div class="exp" >
+                            <img src="4.jpg" alt="">
+                            <span style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+                                SHIVAYA LAMINATES
+                            </span>
+                            <h4 class="duration" style="font-size: small; margin-right: 5%;">
+                                1994 - 2003
+                            </h4></div>
+                </div>
+            </section>
+    
+    
+    
+    
+        </main>
 
-        <section class="secondSection">
-            <div class="shead">
-                <p>Where I've worked so far</p>
-                <h1> Past Experiences</h1>
-            </div>
+    </div>
 
-            <div class="exp-wrapper">
-                    <div class="exp"><span style="margin-right: 1%;">Supertech </span> Laminates Pvt. Ltd.</div>
-                    <div class="exp">Jogma Laminates</div>
-                    <div class="exp">hi</div>
-                    <div class="exp">hi</div>
-                    <div class="exp">hi</div>
-            </div>
-        </section>
+    <!-- ab locomotive scroll cdn search karke script extract karo -->
+     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
 
-
-
-
-    </main>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
 
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
       <!-- Setup and start animation! -->
-    <script>
-        var typed = new Typed('#element', {
-        strings: ['Sanmica Manufacturing,', 'Production line management,', 'and Quality Control.'],
-        typeSpeed: 40,    // Faster typing (40ms per character)
-        backSpeed: 20,    // Optional, faster deleting
-        loop: true  
-        });
+    <script src="pp.js">
     </script>
 
 </body>

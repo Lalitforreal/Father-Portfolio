@@ -4,3 +4,9 @@
         backSpeed: 20,    // Optional, faster deleting
         loop: true  
         });
+
+
+const scroll = new LocomotiveScroll({
+    el: document.querySelector('.data-scroll-container'),
+    smooth: true
+});
