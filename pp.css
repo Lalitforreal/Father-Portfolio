@@ -13,14 +13,16 @@ body{
 
 #minicircle{
     position: fixed;
-    width: 14px;
-    height: 14px;
+    width: 17px;
+    height: 17px;
     border-radius: 50%;
     background-color: rgb(243, 243, 243);
     pointer-events: none;
     transform: translate(-50%, -50%);
     transition: transform 0.1s ease;
     z-index: 9999;
+     /* ✅ ADD THIS LINE to enable the color-inverting effect */
+    mix-blend-mode: difference;
 }
 
 .bounding{
@@ -30,7 +32,7 @@ body{
 
 .bounding >div, .boundingelem{
     transform: translateY(100%);
-    
+    font-weight: 300;
 }
 
 
@@ -162,9 +164,10 @@ nav ul li a:hover {
 
 .secondSection{
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     margin: auto;
-    padding-right: 20vw;
+    padding-top: 3rem;
+    
 
 }
 .secondSection p{
@@ -196,11 +199,12 @@ nav ul li a:hover {
     /* gap: 15vh; */
     margin: 3rem;
     margin-left: 10%;
+    padding-right: 10vw;
 }
 
 
 .exp-wrapper >div{
-    height: 170px;
+    height: 140px;
     width: 100%;
     border-top: 1px solid grey;
     border-bottom: 1px solid grey;;
@@ -210,18 +214,30 @@ nav ul li a:hover {
     font-size: 3rem;
     /* color: grey; */
     will-change: transform, opacity;
+    position: relative;
 }
+
+
 .duration{
     /* color: rgb(153, 81, 220); */
     
     text-shadow: 2px 1px rgb(153, 81, 220) ;
 }
 .exp img{
+    position: absolute;
+    left: 50%; /* Position the image's left edge at the center */
+    transform: translateX(-60%); /* Shift the image back by half its width to truly center it */
     display: none;
     /* opacity: 0; */
-    height: 120%;
-    z-index: 9999;
-    position: absolute;
+    height: 150%; 
+    z-index: 1;
+    padding-right: 10rem;
+}
+
+/* ✅ CHANGE 4: New rule to put text above the image */
+.exp span, .exp h4 {
+    position: relative; /* This is required to make z-index work */
+    z-index: 2;         /* A higher z-index than the image */
 }
 /* second page animation start */
 /* Initial hidden state */

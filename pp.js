@@ -163,7 +163,7 @@ document.querySelectorAll('.exp').forEach(function(exp){
             top: diff ,
             left: details.clientX,
             //for the rotation of image
-            rotate: gsap.utils.clamp(-20, 20, rotDiff * 0.5)
+            rotate: gsap.utils.clamp(-20, 20, rotDiff),
 
         });
     });
