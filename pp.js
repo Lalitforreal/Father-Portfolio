@@ -137,13 +137,20 @@ document.querySelectorAll(".animate-on-scroll").forEach(el => observer.observe(e
 // and jaise jaise mouse tez chale waise waise rotation bhi tez ho jaye
 
 document.querySelectorAll('.exp').forEach(function(exp){
+  let prevX = 0; // ✅ Added this to track previous mouse X position
     exp.addEventListener("mousemove",function(details){
+
 
       const rect = exp.getBoundingClientRect();
       //is a JavaScript DOM method that returns the size of an element and its position relative to the viewport.
       
       //so no wto get the mouse position in the exp elem 
       var diff = (details.clientY - exp.getBoundingClientRect().top - '${10}px'); //this is the distance from the first line of exp 
+      
+
+        // ✅ Properly calculate rotation based on mouse speed
+        const rotDiff = details.clientX - prevX;
+        prevX = details.clientX;
 
         //now to show image 
         // exp.querySelector("img");
@@ -155,8 +162,22 @@ document.querySelectorAll('.exp').forEach(function(exp){
             display: "block",
             top: diff ,
             left: details.clientX,
+            //for the rotation of image
+            rotate: gsap.utils.clamp(-20, 20, rotDiff * 0.5)
 
         });
     });
+
+        // ✅ Added this to reset image when leaving
+    exp.addEventListener("mouseleave", function(){
+        gsap.to(exp.querySelector("img"), {
+            opacity: 0,
+            scale: 0.8,
+            duration: 0.3,
+            ease: "power2.out",
+            rotate: 0
+        });
+    });
 });
+
 
