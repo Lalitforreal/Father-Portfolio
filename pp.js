@@ -138,8 +138,12 @@ document.querySelectorAll(".animate-on-scroll").forEach(el => observer.observe(e
 
 document.querySelectorAll('.exp').forEach(function(exp){
     exp.addEventListener("mousemove",function(details){
-        // console.log(details.clientX, details.clientY);
-        // you'll get the value of the mouse when it is hovered over the elems
+
+      const rect = exp.getBoundingClientRect();
+      //is a JavaScript DOM method that returns the size of an element and its position relative to the viewport.
+      
+      //so no wto get the mouse position in the exp elem 
+      var diff = (details.clientY - exp.getBoundingClientRect().top - '${10}px'); //this is the distance from the first line of exp 
 
         //now to show image 
         // exp.querySelector("img");
@@ -148,12 +152,11 @@ document.querySelectorAll('.exp').forEach(function(exp){
             scale: 1,
             duration: 0.3,
             ease: "power2.out",
-            display: "block"
+            display: "block",
+            top: diff ,
+            left: details.clientX,
+
         });
     });
-    
-
-
-    
 });
 

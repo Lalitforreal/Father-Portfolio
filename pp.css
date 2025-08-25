@@ -219,8 +219,8 @@ nav ul li a:hover {
 .exp img{
     display: none;
     /* opacity: 0; */
-    height: 35%;
-    z-index: 999;
+    height: 120%;
+    z-index: 9999;
     position: absolute;
 }
 /* second page animation start */
