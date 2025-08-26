@@ -180,4 +180,32 @@ document.querySelectorAll('.exp').forEach(function(exp){
     });
 });
 
+// Select hamburger and nav menu
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector("nav ul");
 
+// Toggle menu on click
+hamburger.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+    hamburger.classList.toggle("active");
+});
+
+const navLinks = document.querySelectorAll('nav ul li a');
+
+navLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetUrl = link.getAttribute('href');
+
+        // GSAP animation
+        gsap.to("body", {
+            opacity: 0,
+            y: 50,
+            duration: 0.5,
+            ease: "power2.inOut",
+            onComplete: () => {
+                window.location.href = targetUrl;
+            }
+        });
+    });
+});

@@ -11,6 +11,8 @@ body{
     font-family: "Poppins", sans-serif;
 }
 
+
+
 #minicircle{
     position: fixed;
     width: 17px;
@@ -86,8 +88,123 @@ nav ul li a{
 .right{
     margin-right: 6%;
 }
+/* Hamburger menu base */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 15px;
+    cursor: pointer;
+    z-index: 10000;
+    margin: 1rem;
+}
+.hamburger span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.hamburger span {
+    transition: all 0.3s ease;
+}
+/* hamburger menu base and transition done */
 
 
+@media (max-width : 900px) {
+    body {
+        font-size: 1.2rem; /* Smaller base font */
+        padding: 0 10px;
+    }
+
+    nav {
+        
+        height: 55px;
+        padding-left: 10%;
+        padding-right: 4%;
+    
+    }
+
+    .left {
+        font-size: 1.7rem;
+        margin-left: 0;
+        text-align: center;
+    }
+
+/* Media query to show hamburger */
+
+    .hamburger {
+        display: flex;
+        
+
+    }
+
+    nav ul {
+        position: absolute;
+        top: 55px;
+        right: 0;
+        /* background-color: rgb(221, 185, 255); */
+        background-color: rgba(18, 18, 62, 0.3);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+        /* flex-direction: column; */
+        align-items: center;
+        width: 100%;
+        display: none;        
+    }
+
+    nav ul.active {
+        display: flex;
+        
+    }
+
+    /* ye hamburger kholne ke baad wala effect */
+    nav ul li {
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        padding: 10px 0;
+        
+        transition: background-color 0.3s ease, transform 0.2s ease;
+         /* ✅ New styles for blur & transparency */
+        background-color: transparent; /* Transparent background */
+    }
+    nav ul li a {
+        display: block;
+        width: 100%;
+        color: white;
+        text-decoration: none;
+        font-size: 1.1rem;
+        transition: transform 0.2s ease, color 0.3s ease;
+    }
+
+    nav ul li:hover {
+        background-color: rgba(153, 81, 220, 0.1);
+        transform: scale(1);
+
+    }
+
+    nav ul li a:hover {
+        color: rgb(238, 238, 238);
+    }
+
+
+}
 /* underline wala effect */
 nav ul li a {
     position: relative;
