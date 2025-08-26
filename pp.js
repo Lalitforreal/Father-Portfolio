@@ -192,20 +192,3 @@ hamburger.addEventListener("click", () => {
 
 const navLinks = document.querySelectorAll('nav ul li a');
 
-navLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
-        e.preventDefault();
-        const targetUrl = link.getAttribute('href');
-
-        // GSAP animation
-        gsap.to("body", {
-            opacity: 0,
-            y: 50,
-            duration: 0.5,
-            ease: "power2.inOut",
-            onComplete: () => {
-                window.location.href = targetUrl;
-            }
-        });
-    });
-});

@@ -55,7 +55,7 @@ nav{
     justify-content: space-between;
     align-items: center;
     height: 75px;
-    background-color: rgb(18, 18, 62);
+    
     position: fixed;
     top: 0;
     left: 0;
@@ -63,6 +63,10 @@ nav{
     height: 75px;
     z-index: 9998; 
     /* 9998 otherwise minicircle wont be visible even if i do 9999 */
+    background-color: rgb(114, 41, 170,0.3);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
 }
 
 
@@ -133,7 +137,7 @@ nav ul li a{
 
     nav {
         
-        height: 55px;
+        height: 60px;
         padding-left: 10%;
         padding-right: 4%;
     
@@ -157,15 +161,17 @@ nav ul li a{
         position: absolute;
         top: 55px;
         right: 0;
-        /* background-color: rgb(221, 185, 255); */
-        background-color: rgba(18, 18, 62, 0.3);
-        backdrop-filter: blur(15px);
-        -webkit-backdrop-filter: blur(15px);
+        background-color: rgba(18, 18, 62, 0.15);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+        z-index: 9997;
         /* flex-direction: column; */
         align-items: center;
         width: 100%;
-        display: none;        
+        display: none;  
+              
     }
 
     nav ul.active {
@@ -179,6 +185,8 @@ nav ul li a{
         text-align: center;
         margin: 0;
         padding: 10px 0;
+
+        
         
         transition: background-color 0.3s ease, transform 0.2s ease;
          /* ✅ New styles for blur & transparency */
@@ -201,6 +209,14 @@ nav ul li a{
 
     nav ul li a:hover {
         color: rgb(238, 238, 238);
+    }
+
+    #fleft{
+        font-size: 1.6rem;
+
+        font-weight:200 ;
+        width: 55%;
+        margin-left: 10%;
     }
 
 
