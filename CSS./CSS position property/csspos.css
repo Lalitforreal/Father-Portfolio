@@ -1,0 +1,38 @@
+
+img{
+    border: solid black 2px;
+    /* sirf left me margin dene hai toh */
+    margin-left: 20px; 
+    /* if chaaro taraf margin dena hai toh */
+    margin: 20px;
+}
+.container{
+    border: solid brown 2px;
+    background-color: antiquewhite;
+    height: 1500px;
+    width: 1500px;
+    
+}
+.container2{
+    border: solid brown 2px;
+    background-color: aqua;
+    height: 1500px;
+    width: 1500px;
+
+}
+
+
+.img2{
+    position: relative;
+}
+
+.img3{
+    position: sticky;
+    top: 100px;
+
+}
+
+
+.img4{
+    position: fixed;
+}

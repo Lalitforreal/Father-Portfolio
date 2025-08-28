@@ -1,0 +1,40 @@
+.container{
+    background-color: beige;
+    border: solid black 2px;
+    display: flex;
+    height: 650px;
+    /* to center the box in the container */
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.box{
+    --primary-color : black;
+    --primary-width: 300px;
+    background-color: firebrick;
+    border: solid var(--primary-color) 2px;
+    height: var(--primary-width);
+    width: var(--primary-width);
+    margin: 2px;
+    padding: 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 10px 10px 2px 5px var(--primary-color), 20px 20px red;  
+    /* for multiple shadows */
+}
+
+img{
+    height: 30%;
+    width: 30%;
+}
+#head1{
+    text-shadow: 1px 1.5px 0.3px rgb(219, 231, 129);
+}
+#para{
+    height: 85%;
+    width: 85%;
+    margin: 3px;
+}

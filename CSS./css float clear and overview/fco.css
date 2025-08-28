@@ -1,0 +1,50 @@
+
+
+#img1{
+    float: right;
+    height: 30vh;
+    width: 30vw;
+    
+}
+#subimg1{
+    float: right;
+    height: 30vh;
+    width: 30vw;
+    clear: right;
+}
+
+#img2{
+    float: right;
+    height: 30vh;
+    width: 30vw;
+}
+.para{
+    font-size: larger;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+/* for collapse */
+.box{
+    border: solid black 2px;
+    overflow: auto;
+}
+
+.items{
+    margin: 2px;
+    height: 200px;
+    width: 200px;
+    background-color: goldenrod;
+    border: solid black 1px;
+    /* as soon as I float these to left, the parent box will collapse */
+    float: left;
+}
+
+/* now to prevent the collape, use overflow auto in the parent block */
+
+.container{
+    border: solid black 2px;
+    height: 200px;
+    width: 1000px;
+    overflow: scroll;
+}

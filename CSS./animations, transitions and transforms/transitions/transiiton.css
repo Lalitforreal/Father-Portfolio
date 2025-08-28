@@ -1,0 +1,24 @@
+.box{
+    height: 200px;
+    width: 400px;
+    border: solid black 2px;
+    background-color: rgb(208, 44, 44);
+    /* transition-property: all;
+    transition-duration: 3s;
+    transition-delay: 0.5s;
+    transition-timing-function: cubic-bezier(0.73, -0.04, 0.56, 0.98); */
+    /* if you do just this toh kuch hoga nahi so you'll have to set actions to trigger the transition */
+    /* define a psuedoclass inbuilt hover */
+    
+
+    /* shorthand notation */
+    transition: all 3s ease-in-out 0.5s;
+}
+.box:hover{
+    width: 78vw;
+    height: 42vh;
+    box-shadow: 10px 10px black  ;
+    background-color: brown;
+     /*agar upar transitionproperty all hogi tab hi background color pe bhi lagega otherwise the color change
+     will be abrupt */
+}

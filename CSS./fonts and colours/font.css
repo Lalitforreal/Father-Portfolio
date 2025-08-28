@@ -1,0 +1,26 @@
+.font{
+    font-family: "Montserrat", sans-serif;; /*yaha bohot saare sath me isliye aate hai ki if ek available na ho toh doosra wala apne aap choose hojae*/
+    font-style: italic;
+    color: crimson;
+    font-size: 19px;
+    font-weight: 500; /* font ki motai*/
+    line-height: 1; /* paragraph ki lines ke beech me gap decide karne ke liye hota hai*/
+}
+
+#firstPara{
+    color: blue;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#secondPara{ /*for solid colour if you want it to be a certain transperency use rgba/alpha values*/
+    background-color: rgb(5, 51, 116);
+    color: bisque;
+}
+
+#thirdPara{
+    background-color: rgba(117, 6, 84, 0.621); /* if the last digit or alpha value is 0 then it'll be invisible.*/
+}
+
+.hexadecimal{
+    background-color: #307b91;
+}

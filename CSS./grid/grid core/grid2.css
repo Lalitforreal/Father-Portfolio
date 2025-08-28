@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    height: 100vh;
+    width: 100vw;
+    background-color: crimson;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(4,1fr);
+    /* only after these two steps you can use the gap property */
+    gap: 0.4rem;
+    justify-items: center; 
+    /* used to centre all elements and its used in the container */
+    
+}
+
+.items{
+    gap: 2px;
+    height: 150px;
+    width: 150px;
+    background-color: beige;
+    border: solid black 2px;
+    /* justify-self: end; */
+    /* place-self: center; */ /*ye basically sab ko center kardega noneed to align and justify if you do this*/
+
+
+}

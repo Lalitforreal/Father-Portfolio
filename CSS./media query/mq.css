@@ -1,0 +1,51 @@
+
+
+.container{
+    background-color: beige;
+    border: solid black 2px;
+    display: flex;
+    flex-direction: row;
+    width: 400px;
+
+}
+
+#textBox{
+    background-color: orchid;
+    border: solid black 1px;
+    width:40%;
+    margin: 2px;
+    padding: 2px;
+    /* now to contol theitems inside this make it flex */
+    display: flex;
+    flex-direction: column;
+    
+}
+p{
+    border: solid black 1px;
+}
+
+#imgBox{
+    background-color: yellow;
+    border: solid red 2px;
+    width: 40%;
+    margin: 2px;
+    padding: 2px;
+    /* how to centre the image in the imgBox */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img{
+    position: relative;
+    height:50%;
+    width: 50%;
+
+}
+
+
+@media(max-width:640px){
+    .container{
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(176, 167, 167);
+    padding: 5px;
+    margin: 5px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-content: center;
+    /* translate Z etc. karne ke liye perspective set karna padega */
+    perspective: 800px;
+
+
+}
+.items{
+    margin: 5px;
+    height: 150px;
+    width: 150px;
+    background-color: rgb(65, 198, 76);
+    border: solid black 2px;
+    transform-style: preserve-3d;
+    
+}
+
+#rotateX:hover{
+    transform: rotateX(45deg);
+}
+#rotateY:hover{
+    transform: rotateY(45deg);
+}
+#rotateZ:hover{
+    transform: rotateZ(45deg);
+}
+
+#translateX:hover{
+    transform: translateX(100px);
+}
+#translateY:hover{
+    transform: translateY(100px);
+}
+#translateZ:hover{
+    transform: perspective(1000px) translateZ(-400px);
+}
+
+#scaleX:hover{
+    transform: scaleX(2);
+}
+#scaleY:hover{
+    transform: scaleY(2) rotateX(15deg);
+}
+#scaleZ:hover{
+    transform: scaleZ(2) rotateY(15deg);
+}

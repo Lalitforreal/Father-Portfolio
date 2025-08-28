@@ -1,0 +1,33 @@
+.parent{
+    border: solid black 2px;
+    background-color: cadetblue;
+    width: 50%;
+}
+
+.child{
+    border: solid black 2px;
+    background-color: chocolate;
+    width : 50%;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    background-color: darkcyan;
+    border: solid black 2px; 
+    height: 50vh;
+}
+
+.parentem{
+    border: solid black 2px;
+    width: 500px;
+    height: 300px;
+}
+
+.em{
+    border: dotted blue 2px;
+    /* basically parent se relate karta hai */
+    width : 30rem; 
+
+}

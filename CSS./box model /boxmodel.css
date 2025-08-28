@@ -1,0 +1,53 @@
+h1{ 
+    /* BORDER KE BAARE ME SEEKHO */
+    background-color: rgb(0, 0, 0);
+    color: beige;
+        /*to create a border*/
+    /* border-style: solid;
+    border-width: 2px;
+    border-color: teal; */
+    /* or */
+    border: solid rgb(218, 172, 218) 2px;
+    border-radius: 2px; /* basically corners ko round kardega */
+    /* if sirf ek side ko roung karna hai toh you can use */
+    border-top-left-radius: 5px;
+    /* if only ek side border like undrline or upar border to */
+    border-bottom: solid blueviolet 4px;
+}
+
+.first{
+    /* height and width ke baare me seekho */
+    background-color: rgb(169, 208, 128);
+    border: solid rgb(0, 0, 0) 2px;
+    width: 400px;
+    height: 200px;
+}
+
+.second{
+    background-color: beige;
+    border: solid rgb(0, 0, 0) 5px;
+    width: 400px;
+    padding:40px;
+    margin: 60px;
+    box-sizing: border-box;
+
+}
+
+.third{
+    background-color: burlywood;
+    border: solid rgb(0, 0, 0) 2px;
+    width: 400px;
+    /* You can either do this or 
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+    padding-left: 40px; */
+
+    /* padding: 10px 20px 30px 40px; top right bottom left */
+    /* or like use length x breadth */
+    padding: 20px 40px; /*top bottom*/
+
+    /* similar for margins */ 
+    margin: 20px 40px 0px 180px;
+    
+}

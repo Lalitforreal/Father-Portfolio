@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.container{
+    height: 50vh;
+    width: 100vw;
+    
+    padding: 25px;
+    display: grid;
+    gap: 1rem;
+    background-color: rgb(58, 55, 55);
+    /* grid-template-columns: repeat(3,1fr); */
+    grid-template-columns: repeat(auto-fit, minmax(300px,500px));
+    justify-content: center;
+}
+.item{
+    background-color: rgb(104, 104, 201);
+}

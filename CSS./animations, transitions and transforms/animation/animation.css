@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    background-color: beige;
+    height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+}
+
+.box{
+    background-color: blue;
+    height: 80px;
+    width: 200px;
+    margin: 4px;
+    border-radius: 10px;
+    position: relative;
+    animation-name: rightTravel;
+    /* animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-delay: 1s; */
+    /* shuru me tez chalta hai and end me slow hojata hai so we can control it too*/
+    /* animation-timing-function: linear; */
+    /* animation directions agar alternate kardo toh woh aise bounce back hok echalte rahega */
+    /* animation-direction: alternate; */
+    /* or you can reverse it*/
+    /* animation-fill-mode: forwards; */
+
+    /* shorthand for animations */
+    /* duration | easing-function | delay |
+                                            iteration-count | direction | fill-mode | play-state | name */
+    animation: 3s ease-in-out 1s infinite alternate none running rightTravel ;
+
+    
+}
+
+@keyframes rightTravel {
+    from{
+        /* to make it travel and use top bottom etc you'll have to make the position relative */
+        top: 0;
+        left: 0;
+    }
+    to{
+        top: 0;
+        left: 65%;
+    }
+}
+#circle{
+    background-color: rgba(167, 24, 58, 0.903);
+    height: 100px;
+    width: 100px;
+    margin: 10px;
+    border-radius: 50%;
+    position: relative;
+    top: 30%;
+    left: 40%;
+    animation-name: circleTravel;
+    animation: 10s ease-in-out 0s infinite alternate none running circleTravel ;
+
+}
+@keyframes circleTravel {
+    0%{
+        top: 3%;
+        left: 10%;
+    }
+    30%{
+        top: 60%;
+        left: 75%;
+    }
+    60%{
+        top: 60%;
+        left: 10%;
+    }
+    100%{
+        top: 3%;
+        left: 75%;
+    }
+}
+
+.box1{
+    background-color: blue;
+    height: 80px;
+    width: 200px;
+    margin: 4px;
+    border-radius: 10px;
+    position: relative;
+    animation-name: leftTravel;
+    animation: 3s ease-in-out 1s infinite alternate none running leftTravel;
+}
+@keyframes leftTravel {
+    from{
+        /* start bottom right se */
+        top: 500px;
+        left: 80%;
+    }
+    to{
+        /* end bottom left pe */
+        top: 500px;
+        left: 0;
+    }
+}

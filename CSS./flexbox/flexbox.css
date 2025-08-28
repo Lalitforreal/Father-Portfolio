@@ -1,0 +1,47 @@
+.container{
+    background-color: beige;
+    border: solid black 3px;
+    height: 1200px;
+    display: flex; /* basically container ko flex box bana dega */
+    /* flex-direction: column;  */
+    /* saare flex item column me aajayenge and if you do row toh row me(it's default)*/ 
+    flex-direction: row; 
+    /* reverse the order of the items as in the eg. will become green-coral-blue-aqua */
+    /* flex-wrap: wrap; */
+    /* when you use the property of wrap-reverse the last box will go up instead of down*/
+    /* flex-flow: row wrap; */
+
+
+    /* flex-wrap: wrap; */
+    justify-content:start;
+    /* the flex items will be in center of the main axis(horizontal if row, vertical if column) */
+    align-items: start;
+    align-content: start;
+}
+
+.box{
+    height: 200px;
+    width : 200px;
+    border: solid black 2px;
+    margin: 2px;
+    padding: 2px;
+
+
+}
+
+
+#box1{
+    background-color: aqua;
+    order: 500;
+    align-self: center;
+
+}
+#box2{
+    background-color: blue;
+}
+#box3{
+    background-color: lightcoral;
+}
+#box4{
+    background-color: darkgreen;
+}
