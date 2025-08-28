@@ -252,54 +252,77 @@ nav ul li a{
     }
 }
 
+@media (max-width: 440px) {
 
-@media (max-width: 445px) {
-    .firstSection {
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;  /* Keep top aligned */
-        justify-content: space-between;
-        gap: 6px; /* Slight gap between text and image */    }
-
-    /* Left side text block */
-    #fleft {
-        font-size: 1.1rem;    /* Balanced size */
-        line-height: 1.3;
-        line-height: 1.2;
-        margin: 0;
-        padding: 0;
-        flex-shrink: 1;
+    .firstSection{
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        gap: 4px;  /* Remove large unwanted gaps */    }
 
-    /* Typed.js text */
-    #element {
-        font-size: 1.1rem;    /* Matches parent size */
-        line-height: 1.3;
-        margin: 0;
-        display: inline-block;
-        white-space: normal;      /* Allow wrapping neatly */
     }
 
-    /* Image block */
+
+    #fleft {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        min-width: 100vw;      /* Make text take almost full width */
+        font-size: 0.75rem;    /* Adjust font size for small screens */
+        line-height: 1.3;
+        text-align: left;
+        position: relative;
+        
+    }
+    #hi{
+        position: relative;
+        left: 30%;
+        right: 70%;
+    }
+    
+    /* Fix typed.js alignment on small screens */
+    #fleft #element {
+        font-size: 1rem;          /* Make typed text slightly bigger */
+        display: inline;          /* Keep it on the same line */
+        line-height: inherit;     /* Match surrounding text */
+        white-space: nowrap;      /* Prevent line breaks */
+        vertical-align: baseline; /* Align cursor with text */
+    }
+
+    /* Adjust cursor alignment */
+    .typed-cursor {
+        font-size: 1rem;          /* Same size as typed text */
+        display: inline;
+        line-height: inherit;
+        vertical-align: baseline; /* Cursor stays in line with text */
+        margin-left: 2px;
+    }
+
+    #fleft p {
+        margin-bottom: 0;
+        /* line-height: 1.4; */
+    }
+    /* Image stays on top */
     #fright {
-        width: 40%;
+        position: relative;
+        left: 30%;
+        order: -1;
+        width: 80%;
+        margin-bottom: 1rem;
         display: flex;
         justify-content: center;
-        align-items: flex-start;
-        flex-shrink: 0;        position: relative;
-        top: 0;                   /* Stop jumping */
     }
 
     #fright img {
         max-width: 100%;
         height: auto;
-        display: block;
-    }
-}
 
+    }
+
+    
+
+
+}
 
 /* underline wala effect */
 nav ul li a {
