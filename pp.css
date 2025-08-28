@@ -252,7 +252,7 @@ nav ul li a{
     }
 }
 
-@media (max-width: 440px) {
+@media (max-width: 500px) {
 
     .firstSection{
         display: flex;
@@ -267,11 +267,15 @@ nav ul li a{
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
-        min-width: 100vw;      /* Make text take almost full width */
+        margin: 0;
+        /* margin-right: 20%; */
+        min-width: 90vw;
+        max-width: 100vw;
         font-size: 0.75rem;    /* Adjust font size for small screens */
         line-height: 1.3;
         text-align: left;
-        position: relative;
+        /* position: relative;
+        right: 4.2rem; */
         
     }
     #hi{
@@ -282,21 +286,13 @@ nav ul li a{
     
     /* Fix typed.js alignment on small screens */
     #fleft #element {
-        font-size: 1rem;          /* Make typed text slightly bigger */
+        font-size: 1.2rem;          /* Make typed text slightly bigger */
         display: inline;          /* Keep it on the same line */
         line-height: inherit;     /* Match surrounding text */
         white-space: nowrap;      /* Prevent line breaks */
         vertical-align: baseline; /* Align cursor with text */
     }
 
-    /* Adjust cursor alignment */
-    .typed-cursor {
-        font-size: 1rem;          /* Same size as typed text */
-        display: inline;
-        line-height: inherit;
-        vertical-align: baseline; /* Cursor stays in line with text */
-        margin-left: 2px;
-    }
 
     #fleft p {
         margin-bottom: 0;
@@ -308,7 +304,7 @@ nav ul li a{
         left: 30%;
         order: -1;
         width: 80%;
-        margin-bottom: 1rem;
+        
         display: flex;
         justify-content: center;
     }
@@ -319,6 +315,16 @@ nav ul li a{
 
     }
 
+    #wrap{
+        display: flex;
+        flex-direction: column;
+    }
+    .boundingelem{
+        font-size: 1.5rem;
+    
+    }
+ 
+    
     
 
 
@@ -415,6 +421,7 @@ nav ul li a:hover {
 #element{
     color: rgb(153, 81, 220);
     font-weight: 300;
+    
 }
 
 
