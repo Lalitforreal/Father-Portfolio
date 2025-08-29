@@ -2,8 +2,11 @@
 const scroll = new LocomotiveScroll({
     el: document.querySelector('.data-scroll-container'),
     smooth: true,
-    lerp: 0.08 // optional: adjust scroll speed
+    lerp: 0.08, // optional: adjust scroll speed
+    smartphone: { smooth: true },
+    tablet: { smooth: true }
 });
+
 
 var typed = new Typed('#element', {
 strings: ['Sanmica Manufacturing,', 'Production Management,', 'and Quality Control.'],
