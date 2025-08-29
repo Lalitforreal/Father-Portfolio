@@ -225,7 +225,13 @@ nav ul li a{
 
 @media (max-width: 804px) {
     .firstSection {
+        position: relative;
+        bottom: 17vh;
         display: flex;
+        height: 70dvh;
+        margin: 0;
+        padding: 5vh 0;
+        
         align-items: flex-start; /* ✅ Keeps image fixed at the top */
     }
 
@@ -256,6 +262,25 @@ nav ul li a{
 }
 
 @media (max-width: 500px) {
+    
+
+    .firstSection{
+
+        margin: 0px 0px;
+        padding: 0px 0px;
+        position: static;          /* reset 804px relative positioning */
+        bottom: auto;              /* undo bottom offset */
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 100%;               /* avoid 100vw overflow */
+        height: 95dvh;        /* fill viewport without inner scroll */
+
+        overflow: visible;        
+
+        box-sizing: border-box;
+    }
 
 
     nav{
@@ -281,6 +306,7 @@ nav ul li a{
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
+        
 
     }
 
@@ -290,21 +316,22 @@ nav ul li a{
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
-        margin: 0;
+        padding: 0;
         /* margin-right: 20%; */
-        min-width: 90vw;
-        max-width: 100vw;
+        width: 100%;
         font-size: 0.75rem;    /* Adjust font size for small screens */
         line-height: 1.3;
         text-align: left;
-        /* position: relative;
-        right: 4.2rem; */
+       
         
+
     }
-    #hi{
+    #hi {
         position: relative;
-        left: 30%;
-        right: 70%;
+        left: auto;   /* remove forced offset */
+        right: auto;
+        margin: 0 auto;   /* center properly */
+        text-align: center; /* optional, makes text centered */
     }
     
     /* Fix typed.js alignment on small screens */
@@ -330,18 +357,22 @@ nav ul li a{
     /* Image stays on top */
     #fright {
         position: relative;
-        left: 30%;
-        order: -1;
-        width: 80%;
-        
+        order: -1;          /* keep image above text */
+        width: 100%;        /* take full available width */
+        max-width: 400px;   /* keeps image from being too huge */
+        margin: 0 auto;     /* center the image */
         display: flex;
         justify-content: center;
     }
 
     #fright img {
-        max-width: 100%;
+        width: 100%;
         height: auto;
-
+        object-fit: contain;
+        display: block;
+    }
+    html, body {
+        overflow-x: hidden;
     }
 
     #wrap{
@@ -400,11 +431,15 @@ nav ul li a:hover {
 
 
 /* neeche ka mamla */
+
+body{
+    overflow-x: hidden;
+    overflow-y: auto;
+}
 .firstSection{
     display: flex;
     justify-content: space-around;
     margin: 10vh 0;  /* vertical horizontal*/
-    overflow-x: hidden;
     align-items: center;
     /* margin-bottom: 70px; */
 }
