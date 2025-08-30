@@ -196,4 +196,23 @@ hamburger.addEventListener("click", () => {
 const navLinks = document.querySelectorAll('nav ul li a');
 
 
+// // Function to change text based on screen size
+// function updateText() {
+//   const element = document.getElementById("myText");
+  
+//   if (window.matchMedia("(max-width: 1210px)").matches) {
+//     e.textContent = "This is mobile text 📱";
+//   } else if (window.matchMedia("(max-width: 804px)").matches) {
+//     element.textContent = "This is tablet text 📟";
+//   } else {
+//     element.textContent = "This is desktop text 💻";
+//   }
+// }
+
+// // Run on load
+// updateText();
+
+// // Run on window resize
+// window.addEventListener("resize", updateText);
+
 
