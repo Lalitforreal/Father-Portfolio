@@ -268,17 +268,17 @@ nav ul li a{
 
 @media (max-width: 500px) {
     /* for mobile eliminate smooth scroll */
-    html, body {
-        height: auto;
-        overflow: auto !important;  /* ✅ Enable normal scrolling */
-        -webkit-overflow-scrolling: touch; /* Smooth scroll on iOS */
-    }
+  html, body {
+    height: auto;
+    overflow: auto !important;  /* ✅ Enable normal scrolling */
+    -webkit-overflow-scrolling: touch; /* Smooth scroll on iOS */
+  }
 
-    [data-scroll-container] {
-        min-height: auto;
-        overflow: visible !important; /* ✅ Allow content to flow */
-    }
-    
+  [data-scroll-container] {
+    min-height: auto;
+    overflow: visible !important; /* ✅ Allow content to flow */
+  }
+
 
     main{
         width: 100%;               /* avoid 100vw overflow */
