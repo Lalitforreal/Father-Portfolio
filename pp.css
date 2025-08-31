@@ -463,75 +463,11 @@ nav ul li a{
         font-size: 1rem;
         gap: 0 !important;
     }
+
+
     
 }
 
-/* -------- Tablets -------- */
-@media (max-width: 804px) {
-    .secondSection {
-        padding: 1.5rem 4%;
-        font-size: 0.9rem;
-    }
-
-    .secondSection .shead {
-        margin-left: 4%;
-    }
-
-    .exp-wrapper {
-        padding-right: 4vw;
-        margin-left: 4%;
-    }
-
-    .exp-wrapper > div {
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
-        font-size: 2rem;
-        height: auto;
-        padding: 1rem 0;
-        gap: 0.5rem;
-    }
-
-    .exp img {
-        height: 120%;
-        padding-right: 0;
-    }
-}
-
-/* -------- Phones -------- */
-@media (max-width: 500px) {
-    .secondSection {
-        padding: 1rem 3%;
-        font-size: 0.8rem;
-    }
-
-    .secondSection .shead {
-        margin-left: 0;
-        text-align: center;
-        font-size: 1.4rem;
-    }
-
-    .exp-wrapper {
-        margin: 1.5rem 3%;
-        padding-right: 0;
-    }
-
-    .exp-wrapper > div {
-        flex-direction: column;
-        font-size: 1.5rem;
-        align-items: flex-start;
-        height: auto;
-        padding: 1rem 0;
-    }
-
-    .exp img {
-        position: static;
-        transform: none;
-        margin-top: 1rem;
-        height: auto;
-        max-width: 100%;
-    }
-}
 
 /* underline wala effect */
 nav ul li a {
