@@ -229,8 +229,8 @@ nav ul li a{
 
 @media (max-width: 804px) {
     .firstSection {
-        position: relative;
-        bottom: 17vh;
+        /* position: relative;
+        bottom: 17vh; */
         display: flex;
         height: 70dvh;
         margin: 0;
@@ -408,6 +408,22 @@ nav ul li a{
     
     }
 
+    .secondSection{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 !important;
+    }
+    .secondSection h2, .secondSection p{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        font-size: 1.5rem;
+    }
+    .secondSection p {
+        position: relative;
+        right: 8vw;      
+    }
  
     
     
@@ -469,9 +485,10 @@ nav ul li a{
 }
 
 @media (max-width: 804px) {
+
     .secondSection {
-        padding: 1.5rem 4%;
-        font-size: 0.5rem;
+        
+        font-size: 1rem;
     }
 
     .secondSection .shead {
@@ -493,7 +510,7 @@ nav ul li a{
         gap: 0.5rem;
     }
      .exp > span{
-        font-size:  1.2rem !important;
+        font-size:  1.7rem !important;
      }
 
     .exp img {
