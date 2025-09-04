@@ -191,11 +191,10 @@ nav ul li a{
         margin: 0;
         padding: 10px 0;
 
-        
-        
         transition: background-color 0.3s ease, transform 0.2s ease;
          /* ✅ New styles for blur & transparency */
-        background-color: transparent; /* Transparent background */
+        background-color: rgba(0, 0, 0, 0.495); /* Transparent background */
+        mix-blend-mode: difference;
     }
     nav ul li a {
         display: block;
@@ -304,13 +303,14 @@ nav ul li a{
 
 
     nav{
-        height: 3rem;
+        height: 3.7rem;
         padding-left: 8%;
     }
 
     .left{
-        font-size: 1rem;
+        font-size: 1.2rem;
         margin-left: 0;
+        font-weight: 500;
     }
     .hamburger {
         width: 18px;   /* smaller width */
@@ -417,6 +417,7 @@ nav ul li a{
         flex-direction: column;
         justify-content: center;
         padding: 0 !important;
+        height: 100vh;
     }
     .secondSection h2{
         font-size: 1.5rem;
@@ -445,10 +446,45 @@ nav ul li a{
 
 }
 
-@media (max-width: 475px){
+@media (max-width: 480px){
+    /* styles for phones */
     .secondSection h2{
-        font-size: 1rem;
+        font-size: 1.1rem;
         margin-left: 10vw;
+        width: 79vw;
+        position: relative;
+        right: 9vw;
+    }
+    .secondSection p{
+        width: fit-content !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-left: 8vw;
+        padding-left: 0 !important;
+    }
+    
+    .secondSection span{
+        font-size: 1.3rem !important;
+    }
+    .secondSection .shead {
+        width: fit-content !important;
+        margin-left: 10%;
+        position: relative;
+        right: 8vw;      
+    }
+
+
+}
+
+
+@media (max-width: 390px) {
+
+
+  /* Legacy tiny phones */
+    .secondSection h2{
+        font-size: 1.1rem !important;
+        margin-left: 15vw;
         width: 79vw;
         position: relative;
         right: 9vw;
@@ -467,10 +503,48 @@ nav ul li a{
     }
     .secondSection .shead {
         width: fit-content !important;
-        margin-left: 10%;
+        margin-left: 9% !important;
         position: relative;
         right: 8vw;      
     }
+
+    .secondSection .exp{
+        gap: 0 !important;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem !important;
+    }
+    
+    .secondSection .exp > span{
+        font-size: 1.3rem !important;
+    }
+    .exp span, .exp h4 {
+        height: auto;
+        margin: 0;      
+        padding: 0;     
+        line-height: 1.2; /* adjust for readability */
+        display: block;
+    }
+    .secondSection .exp h4{
+        font-size: 1rem !important;
+        margin-top: 0px !important;   /* adjust vertical gap */
+        margin-bottom: 10px !important;
+    }
+    .secondSection .exp > span{
+        font-size: 1.5rem !important;
+        margin-top: 10px !important;
+    }
+    
+    .exp-wrapper > div{
+        height: 100px !important;
+    }
+
+
+
+
+   
+
+
 }
 
 @media (min-width: 981px) {
