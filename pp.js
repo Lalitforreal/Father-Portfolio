@@ -215,4 +215,14 @@ const navLinks = document.querySelectorAll('nav ul li a');
 // // Run on window resize
 // window.addEventListener("resize", updateText);
 
-
+  const img = document.querySelector(".firstSection img");
+  if (img) {
+    if (img.complete) {
+      // if image already loaded from cache
+      img.classList.add("loaded");
+    } else {
+      img.addEventListener("load", () => {
+        img.classList.add("loaded");
+      });
+    }
+  }

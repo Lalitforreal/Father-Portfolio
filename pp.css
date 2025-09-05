@@ -728,8 +728,12 @@ body{
     object-fit: cover;
     display: block;
     margin-right: 0; /* align it towards the right */
+    opacity: 0;            /* hidden by default */
+    transition: all 3s ease-in-out; /* smooth fade-in */
 }
-
+.firstSection img.loaded {
+    opacity: 1; /* becomes visible when class is added */
+}
 
 #fleft{
     font-size: 2.6rem;
@@ -852,3 +856,17 @@ body{
   transition-delay: var(--delay, 0s);
 }
 /* second page animation end */
+
+
+.thirdSection{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.thirdSection p{
+    width: 75vw;
+    margin: 10px 10px;
+    font-size: 1.2rem;
+}
