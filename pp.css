@@ -865,8 +865,16 @@ body{
     align-items: center;
 }
 
+.thirdSection h2{
+    text-shadow: 2px 1px rgb(153, 81, 220) ;
+    position: relative;
+    right: 21%;
+    font-size: 1.4rem;
+
+  
+}
 .thirdSection p{
-    width: 75vw;
+    width: 76vw;
     margin: 10px 10px;
-    font-size: 1.2rem;
+    font-size: 0.8rem;
 }
